@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cliente 12 pg1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/app.js" defer></script>
+</head>
+<body>
+    <form id="endpointForm">
+        <label for="url">Base URL:</label>
+        <input type="text" name="url" id="url" required><br>
+        
+        <label for="showAll">Endpoint de obtener todos:</label>
+        <input type="text" name="showAll" id="showAll" required><br>
+        
+        <label for="add">Endpoint de insertar:</label>
+        <input type="text" name="add" id="add" required><br>
+        
+        <label for="update">Endpoint de editar:</label>
+        <input type="text" name="update" id="update" required><br>
+        
+        <label for="delete">Endpoint de eliminar:</label>
+        <input type="text" name="delete" id="delete" required><br>
+        
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <div id="insertForm" style="display:none;">
+        <h3>Insertar Producto</h3>
+        <label>Nombre:</label>
+        <input type="text" id="productName" required><br>
+        
+        <label>Precio:</label>
+        <input type="number" id="productPrice" required><br>
+        
+        <button id="insertBtn" class="btn btn-success">Insertar</button>
+    </div>
+
+    <div id="productTable" style="display:none;">
+        <h3>Lista de Productos</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+</body>
+</html>
